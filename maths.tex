@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[paperwidth=4in,paperheight=4in,margin=0in]{geometry}
+\usepackage{mathptmx}%{times}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{color}
+\usepackage{helvet}
+\usepackage{amsmath}
+\usepackage[EULERGREEK]{sansmath}
+\usepackage{bm}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+\sansmath
+
+\setlength{\parindent}{0pt}
+\definecolor{u}{RGB}{27,158,119}
+\definecolor{d}{RGB}{217,95,2}
+\definecolor{p}{RGB}{117,112,179}
+
+\begin{document}
+\begin{align*}
+\phi = a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z + a_9 x z^2
+\end{align*}
+
+\begin{align*}
+\phi = a_1 + a_2 x + a_3 z + a_4 x z + a_5 z^2 + a_6 x z^2
+\end{align*}
+
+\begin{align*}
+	0.5 \leq \textcolor{u}{w_u} \leq 1 \\
+	0 \leq \textcolor{d}{w_d} \leq 0.5 \\
+	\textcolor{u}{w_u} - \textcolor{d}{w_d} \geq \max_{p\:\in\:P}(|\textcolor{p}{w_p}|)
+\end{align*}
+
+\begin{align*}
+	\phi_F = a_1 = \begin{bmatrix}
+		w_1 \\
+		w_2 \\
+		\vdots \\
+		w_{12}
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+		\phi_1 \\
+		\phi_2 \\
+		\vdots \\
+		\phi_{12}
+	\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+	\phi_F = \begin{bmatrix}
+		\textcolor{u}{w_u} \\
+		\textcolor{d}{w_d} \\
+		\textcolor{p}{w_3} \\
+		\vdots \\
+		\textcolor{p}{w_{12}}
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+		\textcolor{u}{\phi_u} \\
+		\textcolor{d}{\phi_d} \\
+		\textcolor{p}{\phi_3} \\
+		\vdots \\
+		\textcolor{p}{\phi_{12}}
+	\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z + a_9 x z^2 \\
+	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z \\
+	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x z^2 \\
+	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^2 z + a_8 x z^2 \\
+	&\:\:\vdots \\
+	\phi &= a_1 + a_2 x + a_3 y \\
+	\phi &= a_1 + a_2 x + a_3 x^2 \\
+	\phi &= a_1 + a_2 y + a_3 y^2 \\
+	\phi &= a_1 + a_2 x \\
+	\phi &= a_1 + a_2 y \\
+\end{align*}
+
+\newpage
+
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[tikz]{standalone}
+\usepackage{bm}
+\begin{document}
+\begin{tikzpicture}[
+  scale=0.56,
+  cpnt/.style={fill=gray},
+]
+
+\draw [thick, ->] (14.5,-2) -- (14.5,-1) node [at end, anchor=south] {$z$};
+\draw [thick, ->] (14.5,-2) -- (15.5,-2) node [at end, anchor=west] {$x$};
+
+\node [above] at (2,7) {(a)};
+\draw [thick, ->] (6.25,3) -- (6.75,2.3);
+\node [right] at (6.45,2.6) {$\mathbf{u}_f$};
+
+
+\begin{scope}[shift={(10,0)}]
+	\node [above] at (0,7) {(b)};
+	\draw (0,0) rectangle (9.6,6);
+	\draw (0,2) -- (9.6,2);
+	\draw (0,4) -- (9.6,4);
+	\draw (0,0) -- (0,6);
+	\draw (2.4,0) -- (2.4,6);
+	\draw (4.8,0) -- (4.8,6);
+	\draw (7.2,0) -- (7.2,6);
+
+	\draw [ultra thick] (7.2,2) -- (7.2,4);
+	\draw [thick] (7.2,3) circle [radius=0.2] node [anchor=south west] {$\phi_F$};
+	\draw [thick, ->] (7.2,3) -- (7.8,2.3) node [anchor=west] {$\mathbf{u}_f$};
+
+	\path [cpnt] (1.2,1) circle [radius=0.1] node [right] {$\phi_c$};
+	\path [cpnt] (1.2,3) circle [radius=0.1];
+	\path [cpnt] (1.2,5) circle [radius=0.1];
+
+	\path [cpnt] (3.6,1) circle [radius=0.1];
+	\path [cpnt] (3.6,3) circle [radius=0.1];
+	\path [cpnt] (3.6,5) circle [radius=0.1];
+
+	\path [cpnt] (6.0,1) circle [radius=0.1];
+	\path [cpnt] (6.0,3) circle [radius=0.1] node [right] {$\phi_u$};
+	\path [cpnt] (6.0,5) circle [radius=0.1];
+
+	\path [cpnt] (8.4,1) circle [radius=0.1];
+	\path [cpnt] (8.4,3) circle [radius=0.1] node [right] {$\phi_d$};
+	\path [cpnt] (8.4,5) circle [radius=0.1];
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}
