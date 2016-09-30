@@ -10,6 +10,7 @@
 \usepackage{bm}
 \usepackage{xcolor}
 
+\newcommand{\iu}{{i\mkern1mu}}
 \renewcommand{\familydefault}{\sfdefault}
 \sansmath
 
@@ -20,28 +21,28 @@
 
 \begin{document}
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z + a_9 x z^2
+\phi = a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2 + a_6 y^2 + a_7 x^3 + a_8 x^2 y + a_9 x y^2
 \end{align*}
 
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2
+\phi = a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2
 \end{align*}
 
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z
+\phi = a_1 + a_2 x + a_3 y
 \end{align*}
 
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z + a_4 x^2
+\phi = a_1 + a_2 x + a_3 y + a_4 x^2
 \end{align*}
 
 
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z + a_4 x z
+\phi = a_1 + a_2 x + a_3 y + a_4 x y
 \end{align*}
 
 \begin{align*}
-\phi = a_1 + a_2 x + a_3 z + a_4 x z + a_5 z^2 + a_6 x z^2
+\phi = a_1 + a_2 x + a_3 y + a_4 x y + a_5 y^2 + a_6 x y^2
 \end{align*}
 
 \begin{align*}
@@ -85,16 +86,36 @@
 \end{align*}
 
 \begin{align*}
-	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z + a_9 x z^2 \\
-	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x^2 z \\
-	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^3 + a_8 x z^2 \\
-	\phi &= a_1 + a_2 x + a_3 z + a_4 x z + a_5 x^2 + a_6 z^2 + a_7 x^2 z + a_8 x z^2 \\
+	\phi &= a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2 + a_6 y^2 + a_7 x^3 + a_8 x^2 y + a_9 x y^2 \\
+	\phi &= a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2 + a_6 y^2 + a_7 x^3 + a_8 x^2 y \\
+	\phi &= a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2 + a_6 y^2 + a_7 x^3 + a_8 x y^2 \\
+	\phi &= a_1 + a_2 x + a_3 y + a_4 x y + a_5 x^2 + a_6 y^2 + a_7 x^2 y + a_8 x y^2 \\
 	&\:\:\vdots \\
 	\phi &= a_1 + a_2 x + a_3 y \\
 	\phi &= a_1 + a_2 x + a_3 x^2 \\
 	\phi &= a_1 + a_2 y + a_3 y^2 \\
 	\phi &= a_1 + a_2 x \\
 	\phi &= a_1 + a_2 y \\
+\end{align*}
+\newpage
+
+\begin{align*}
+	\frac{\partial \phi^{(n)}_j}{\partial t} &= -u \frac{\phi_R - \phi_L}{\Delta x} \\
+	\\
+\phi_L &= w_u \phi_{j-1} + w_d \phi_j \\
+\phi_R &= w_u \phi_j + w_d \phi_{j+1} \\
+\\
+	\phi_j^{(n)} &= A^n e^{\iu j k \Delta x}
+\end{align*}
+
+\begin{align*}
+	\phi_L &= w_{uu} \phi_{j-2} + w_u \phi_{j-1} + w_d \phi_j \\
+	\phi_R &= w_{uu} \phi_{j-1} + w_u \phi_j + w_d \phi_{j+1}
+\end{align*}
+
+\begin{align*}
+	\phi_L &= w_{uuu} \phi_{j-3} + w_{uu} \phi_{j-2} + w_u \phi_{j-1} + w_d \phi_j \\
+	\phi_R &= w_{uuu} \phi_{j-2} + w_{uu} \phi_{j-1} + w_u \phi_j + w_d \phi_{j+1}
 \end{align*}
 
 \newpage
